@@ -1,8 +1,18 @@
+import axios from 'axios';
+
 /*
   STEP 1: using axios, send a GET request to the following URL
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
+let profile = {}
+
+axios.get('https://api.github.com/users/salza323')
+  .then(response =>{
+    profile = response.data
+    // console.log(data)
+  })
+
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
@@ -11,6 +21,8 @@
 
     Skip to STEP 3.
 */
+
+
 
 /*
   STEP 4: Pass the data received from Github into your function,
@@ -49,6 +61,20 @@ const followersArray = [];
       </div>
     </div>
 */
+
+function gitProfileMaker (object){
+  const mainCard = document.createElement('div')
+  const picture = mainCard.createElement('img')
+  const info = maincard.createElement('div')
+  const name = info.createElement('h3')
+  const uName = info.createElement('p')
+  const location = info.createElement('p')
+  const profile = info.createElement('p')
+  const url = profile.createElement('a')
+  const followers = info.createElement('p')
+  const following = info.createElement('p')
+  const bio = info.createElement('p')
+}
 
 /*
   List of LS Instructors Github username's:
